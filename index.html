@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Batik Mega Mendung, a Video.js 10 skin</title>
+<meta name="description" content="A Video.js 10 skin where the timeline is a mega mendung cloud wave that fills with gold as the story moves.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231b2a6b'/%3E%3Cpath d='M4 20q4-6 8 0t8 0 8 0' fill='none' stroke='%23e8b44a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./bundle.css">
+<style>
+  :root {
+    --indigo: #1b2a6b;
+    --indigo-deep: #101a45;
+    --gold: #e8b44a;
+    --gold-bright: #f5c96b;
+    --cream: #faf5ea;
+    --ink: #0b0e1e;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--cream);
+    background:
+      radial-gradient(900px 480px at 85% -10%, rgba(27, 42, 107, 0.55), transparent 60%),
+      radial-gradient(700px 420px at 0% 110%, rgba(232, 180, 74, 0.12), transparent 60%),
+      var(--ink);
+  }
+
+  .page {
+    max-width: 1024px;
+    padding: 48px 20px 64px;
+    margin: 0 auto;
+  }
+
+  .kicker {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+  }
+
+  h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .lede {
+    max-width: 640px;
+    margin: 0 0 32px;
+    font-size: 18px;
+    line-height: 1.55;
+    color: rgba(250, 245, 234, 0.82);
+  }
+
+  .hint {
+    margin: 18px auto 0;
+    max-width: 960px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(250, 245, 234, 0.6);
+    text-align: center;
+  }
+
+  .hint b { color: var(--gold-bright); font-weight: 650; }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 44px 0 0;
+  }
+
+  .feature {
+    padding: 20px;
+    background: rgba(27, 42, 107, 0.32);
+    border: 1px solid rgba(232, 180, 74, 0.28);
+    border-radius: 16px;
+  }
+
+  .feature h2 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: var(--gold-bright);
+  }
+
+  .feature p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: rgba(250, 245, 234, 0.78);
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 36px;
+  }
+
+  .links a {
+    padding: 12px 22px;
+    font-weight: 650;
+    color: var(--indigo-deep);
+    text-decoration: none;
+    background: var(--gold);
+    border-radius: 999px;
+    transition: background 0.15s;
+  }
+
+  .links a:hover { background: var(--gold-bright); }
+
+  .links a.ghost {
+    color: var(--cream);
+    background: transparent;
+    border: 1px solid rgba(250, 245, 234, 0.35);
+  }
+
+  .links a.ghost:hover { border-color: var(--gold); color: var(--gold-bright); }
+
+  footer {
+    margin-top: 44px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(250, 245, 234, 0.5);
+  }
+
+  footer a { color: rgba(250, 245, 234, 0.75); }
+</style>
+</head>
+<body>
+<main class="page">
+  <header>
+    <p class="kicker">Contra x Mux, Video.js Skins Design Challenge</p>
+    <h1>Batik <em>Mega Mendung</em></h1>
+    <p class="lede">A Video.js 10 skin where the timeline is a wave. The progress bar is a mega mendung cloud wave that fills with gold as the story moves, the play button is a medallion, and the control bar is deep indigo with a batik cloud pattern. Every control is real: play, seek, volume, speed, fullscreen.</p>
+  </header>
+
+  <video-player class="batik-player">
+    <media-container class="batik-container">
+      <video src="https://stream.mux.com/BV3YZtogl89mg9VcNBhhnHm02Y34zI1nlMuMQfAbl3dM/highest.mp4" playsinline preload="metadata"></video>
+
+      <media-buffering-indicator class="batik-buffering">
+        <div class="batik-spinner"></div>
+      </media-buffering-indicator>
+
+      <media-play-button class="batik-big-play" aria-label="Play">
+        <span class="show-when-paused"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+        <span class="show-when-playing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg></span>
+        <span class="show-when-ended"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V1.8L6.8 6 12 10.2V7a5 5 0 1 1-5 5H4.5A7.5 7.5 0 1 0 12 5z" fill="currentColor"/></svg></span>
+      </media-play-button>
+
+      <media-controls>
+        <media-controls-content class="batik-controls">
+          <media-time-slider class="batik-slider">
+            <media-slider-track class="batik-track">
+              <media-slider-buffer class="batik-buffer"></media-slider-buffer>
+              <media-slider-fill class="batik-fill"></media-slider-fill>
+            </media-slider-track>
+            <media-slider-thumb class="batik-thumb">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 18a3.5 3.5 0 0 1-.6-6.9 5 5 0 0 1 9.6-1.3A3.2 3.2 0 0 1 17.5 18Z" fill="currentColor"/></svg>
+            </media-slider-thumb>
+            <media-slider-preview class="batik-preview">
+              <media-slider-value type="pointer" class="batik-preview-value"></media-slider-value>
+            </media-slider-preview>
+          </media-time-slider>
+
+          <media-controls-group class="batik-group" aria-label="Playback controls">
+            <media-play-button class="batik-btn batik-play" aria-label="Play">
+              <span class="show-when-paused"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+              <span class="show-when-playing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg></span>
+              <span class="show-when-ended"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V1.8L6.8 6 12 10.2V7a5 5 0 1 1-5 5H4.5A7.5 7.5 0 1 0 12 5z" fill="currentColor"/></svg></span>
+            </media-play-button>
+
+            <media-time-group class="batik-time">
+              <media-time type="current"></media-time>
+              <media-time-separator> / </media-time-separator>
+              <media-time type="duration"></media-time>
+            </media-time-group>
+
+            <media-mute-button class="batik-btn batik-mute" aria-label="Mute">
+              <span class="show-when-unmuted"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4.2V4.8L8 9H4z" fill="currentColor"/><path d="M16.5 8.7a4.8 4.8 0 0 1 0 6.6M19 6.2a8.4 8.4 0 0 1 0 11.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <span class="show-when-muted"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4.2V4.8L8 9H4z" fill="currentColor"/><path d="M16.5 9.5l5 5M21.5 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            </media-mute-button>
+
+            <media-volume-slider class="batik-volume" aria-label="Volume">
+              <media-slider-track class="batik-vtrack">
+                <media-slider-fill class="batik-vfill"></media-slider-fill>
+              </media-slider-track>
+              <media-slider-thumb class="batik-vthumb"></media-slider-thumb>
+              <media-slider-preview class="batik-vpreview">
+                <media-slider-value type="pointer" class="batik-vvalue"></media-slider-value>
+              </media-slider-preview>
+            </media-volume-slider>
+
+            <span class="batik-spacer"></span>
+
+            <media-playback-rate-button class="batik-rate" rates="0.5 0.75 1 1.25 1.5 2" aria-label="Playback rate"></media-playback-rate-button>
+
+            <media-fullscreen-button class="batik-btn batik-fullscreen" aria-label="Fullscreen">
+              <span class="show-when-not-fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="show-when-fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </media-fullscreen-button>
+          </media-controls-group>
+        </media-controls-content>
+      </media-controls>
+
+      <media-gesture type="tap" action="togglePaused" pointer="mouse" region="center"></media-gesture>
+      <media-gesture type="doubletap" action="seekStep" value="-10" region="left"></media-gesture>
+      <media-gesture type="doubletap" action="toggleFullscreen" region="center"></media-gesture>
+      <media-gesture type="doubletap" action="seekStep" value="10" region="right"></media-gesture>
+
+      <media-hotkey keys="Space" action="togglePaused"></media-hotkey>
+      <media-hotkey keys="m" action="toggleMuted"></media-hotkey>
+      <media-hotkey keys="f" action="toggleFullscreen"></media-hotkey>
+      <media-hotkey keys="ArrowLeft" action="seekStep" value="-5"></media-hotkey>
+      <media-hotkey keys="ArrowRight" action="seekStep" value="5"></media-hotkey>
+
+      <media-status-announcer></media-status-announcer>
+
+      <media-error-dialog>
+        <media-dialog-popup class="batik-error">
+          <media-dialog-title></media-dialog-title>
+          <media-dialog-description></media-dialog-description>
+          <media-dialog-close></media-dialog-close>
+        </media-dialog-popup>
+      </media-error-dialog>
+    </media-container>
+  </video-player>
+
+  <p class="hint">Click the video to play or pause. Double-click left or right to seek 10 seconds, double-click center for fullscreen. Keys: <b>Space</b> play and pause, <b>M</b> mute, <b>F</b> fullscreen, <b>Left</b> and <b>Right</b> seek 5 seconds.</p>
+
+  <section class="features">
+    <div class="feature">
+      <h2>Wave timeline</h2>
+      <p>The seek bar is a mega mendung cloud wave. Gold fills the wave as the story moves, and the thumb is a small gold medallion.</p>
+    </div>
+    <div class="feature">
+      <h2>Medallion play</h2>
+      <p>A large gold ring medallion sits at the center before playback starts, with a slow breathing glow that stops the moment you press play.</p>
+    </div>
+    <div class="feature">
+      <h2>Indigo and gold</h2>
+      <p>Deep indigo control bar with a faint batik cloud pattern, gold icons, cream time readout. Built on Video.js 10 web components, so every control is native and keyboard friendly.</p>
+    </div>
+  </section>
+
+  <div class="links">
+    <a href="https://github.com/afahru/videojs-batik-mega-mendung">View the code on GitHub</a>
+    <a class="ghost" href="https://contra.com/community/topic/videojsskinschallenge">Video.js Skins Design Challenge</a>
+  </div>
+
+  <footer>
+    Built with Video.js 10. Demo video: the Mux sample asset used in the Video.js docs.
+    Batik Mega Mendung is an original skin by Muhamad Fahrurrozi, 2026.
+  </footer>
+</main>
+<script type="module" src="./bundle.js"></script>
+</body>
+</html>
